@@ -61,7 +61,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void forNumber15ShouldReturnBuzz(){
+    public void forNumber15ShouldReturnFizzBuzz(){
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         String answer = fizzBuzz.doIt(15);
@@ -69,9 +69,13 @@ public class FizzBuzzTest {
         assertEquals(answer,"fizzbuzz");
     }
 
-/*    @Test(expected = Exception.class)
-    public void catches() throws Exception {
-        FizzBuzz k = new FizzBuzz();
-        throw new Exception();
-    }*/
+    @Test
+    public void forNumber45ShouldReturnFizzBuzz(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.doIt(45);
+
+        assertEquals(answer,"fizzbuzz");
+    }
+
 }

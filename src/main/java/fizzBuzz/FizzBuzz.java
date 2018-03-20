@@ -15,4 +15,13 @@ class FizzBuzz {
         }
         return s+"";
     }
+
+    public static void main(String[] args){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        for(int i=1; i<100; i++){
+            String fb2number = fizzBuzz.doIt(i);
+            System.out.println(fb2number);
+        }
+    }
 }
