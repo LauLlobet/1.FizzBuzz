@@ -7,7 +7,7 @@ import org.junit.Test;
 public class FizzBuzzTest {
 
     @Test
-    public void forNumber1() {
+    public void forNumber1ShouldReturn1() {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         String answer = fizzBuzz.doIt(1);
@@ -16,7 +16,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public  void forNumber2() {
+    public  void forNumber2ShouldReturn2() {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         String answer = fizzBuzz.doIt(2);
@@ -25,13 +25,23 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void forNumber3() {
+    public void forNumber3ShouldReturnFizz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         String answer = fizzBuzz.doIt(3);
 
         assertEquals(answer, "fizz");
     }
+
+    @Test
+    public void forNumber5ShouldReturnBuzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.doIt(5);
+
+        assertEquals(answer,"buzz");
+    }
+
 /*    @Test(expected = Exception.class)
     public void catches() throws Exception {
         FizzBuzz k = new FizzBuzz();
