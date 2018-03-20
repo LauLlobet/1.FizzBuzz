@@ -7,11 +7,7 @@ class MultipleCheckedInteger{
         value = s;
     }
 
-    boolean isMultipleOfThree(){
-        return value%3 == 0;
-    }
-
-    boolean isMultipleOfFive(){
-        return value == 5;
+    boolean isMultipleOf(int multiple){
+        return value%multiple == 0;
     }
 }

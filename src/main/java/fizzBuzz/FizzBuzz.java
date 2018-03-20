@@ -4,10 +4,10 @@ class FizzBuzz {
     String doIt(int s) {
 
         MultipleCheckedInteger number = new MultipleCheckedInteger(s);
-        if(number.isMultipleOfThree()){
+        if(number.isMultipleOf(3)){
             return "fizz";
         }
-        if(number.isMultipleOfFive()){
+        if(number.isMultipleOf(5)){
             return "buzz";
         }
         return s+"";
