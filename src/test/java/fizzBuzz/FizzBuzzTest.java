@@ -54,9 +54,19 @@ public class FizzBuzzTest {
     @Test
     public void forNumber10ShouldReturnBuzz(){
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         String answer = fizzBuzz.doIt(10);
 
         assertEquals(answer,"buzz");
+    }
+
+    @Test
+    public void forNumber15ShouldReturnBuzz(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.doIt(15);
+
+        assertEquals(answer,"fizzbuzz");
     }
 
 /*    @Test(expected = Exception.class)
