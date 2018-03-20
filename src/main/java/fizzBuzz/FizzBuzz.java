@@ -2,20 +2,14 @@ package fizzBuzz;
 
 class FizzBuzz {
     String doIt(int s) {
-        if(isMultipleOfThree(s)){
+
+        MultipleCheckedInteger number = new MultipleCheckedInteger(s);
+        if(number.isMultipleOfThree()){
             return "fizz";
         }
-        if(isMultipleOfFive(s)){
+        if(number.isMultipleOfFive()){
             return "buzz";
         }
         return s+"";
-    }
-
-    private boolean isMultipleOfThree(int number){
-        return number == 3;
-    }
-
-    private boolean isMultipleOfFive(int number){
-        return number == 5;
     }
 }
