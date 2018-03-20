@@ -1,81 +1,66 @@
 package fizzBuzz;
 import static org.junit.Assert.assertEquals;
 
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+@RunWith(JUnitParamsRunner.class)
 public class FizzBuzzTest {
 
     @Test
-    public void forNumber1ShouldReturn1() {
+    @Parameters({"1, 1",
+            "2, 2",
+            "4, 4",
+            "7, 7"
+    })
+    public void forNumbersNotMatchingShouldReturnTheNumber(int number, String expectedAnswer) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String answer = fizzBuzz.doIt(1);
+        String answer = fizzBuzz.doIt(number);
 
-        assertEquals(answer, "1");
+        assertEquals(expectedAnswer,answer);
     }
 
     @Test
-    public  void forNumber2ShouldReturn2() {
+    @Parameters({"12, fizz",
+            "3, fizz",
+            "6, fizz",
+            "9, fizz"
+    })
+    public void forNumbersMultiplesOf3ShouldReturnFuzz(int number, String expectedAnswer) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String answer = fizzBuzz.doIt(2);
+        String answer = fizzBuzz.doIt(number);
 
-        assertEquals(answer,"2");
+        assertEquals(expectedAnswer,answer);
     }
-
     @Test
-    public void forNumber3ShouldReturnFizz() {
+    @Parameters({"5, buzz",
+            "10, buzz",
+            "20, buzz",
+            "25, buzz"
+    })
+    public void forNumbersMultiplesOf5ShouldReturnBuzz(int number, String expectedAnswer) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String answer = fizzBuzz.doIt(3);
+        String answer = fizzBuzz.doIt(number);
 
-        assertEquals(answer, "fizz");
+        assertEquals(expectedAnswer,answer);
     }
-
     @Test
-    public void forNumber5ShouldReturnBuzz() {
+    @Parameters({"15, fizzbuzz",
+            "30, fizzbuzz",
+            "150, fizzbuzz",
+            "90, fizzbuzz"
+    })
+    public void forNumbersMultiplesOf5And3ShouldReturnFizzBuzz(int number, String expectedAnswer) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String answer = fizzBuzz.doIt(5);
+        String answer = fizzBuzz.doIt(number);
 
-        assertEquals(answer,"buzz");
+        assertEquals(expectedAnswer,answer);
     }
-
-    @Test
-    public void forNumber9ShouldReturnFizz() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String answer = fizzBuzz.doIt(9);
-
-        assertEquals(answer,"fizz");
-    }
-
-    @Test
-    public void forNumber10ShouldReturnBuzz(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String answer = fizzBuzz.doIt(10);
-
-        assertEquals(answer,"buzz");
-    }
-
-    @Test
-    public void forNumber15ShouldReturnFizzBuzz(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String answer = fizzBuzz.doIt(15);
-
-        assertEquals(answer,"fizzbuzz");
-    }
-
-    @Test
-    public void forNumber45ShouldReturnFizzBuzz(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String answer = fizzBuzz.doIt(45);
-
-        assertEquals(answer,"fizzbuzz");
-    }
-
 }
