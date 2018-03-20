@@ -42,6 +42,15 @@ public class FizzBuzzTest {
         assertEquals(answer,"buzz");
     }
 
+    @Test
+    public void forNumber9ShouldReturnFizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String answer = fizzBuzz.doIt(9);
+
+        assertEquals(answer,"fizz");
+    }
+
 /*    @Test(expected = Exception.class)
     public void catches() throws Exception {
         FizzBuzz k = new FizzBuzz();
