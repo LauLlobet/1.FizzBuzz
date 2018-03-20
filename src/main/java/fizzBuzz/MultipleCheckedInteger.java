@@ -8,7 +8,7 @@ class MultipleCheckedInteger{
     }
 
     boolean isMultipleOfThree(){
-        return value == 3;
+        return value%3 == 0;
     }
 
     boolean isMultipleOfFive(){
