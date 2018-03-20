@@ -1,7 +1,7 @@
 package fizzBuzz;
 
 class FizzBuzz {
-    int doIt(int s) {
-        return s;
+    String doIt(int s) {
+        return s+"";
     }
 }
